@@ -1,31 +1,17 @@
-# Big Fish CLI 🎣
+# Big Fish CLI (Windows Edition)
 
-An advanced, open-source local development agent powered by Google Gemini. 
-Created and maintained by [success009](https://github.com/success009).
-
-## 🚀 What is this?
-Big Fish CLI bridges your local terminal environment with Google AI Studio using lightweight browser automation (Playwright). This allows developers to utilize powerful Pro LLMs directly in their terminal without paying for expensive API tokens, all while giving the AI direct access to your local filesystem.
-
-## ✨ Features
-- **Local System Control**: The AI can read, write, edit files, and execute shell commands automatically.
-- **Session Persistence**: Saves your conversations, Current Working Directory, and profile automatically.
-- **Multi-Profile Support**: Seamlessly switches between Google Chrome profiles.
-- **Audio/Voice UI**: Real-time TTS pipeline integration.
-- **Fully Open Source**: Built for the community. Contributions are highly encouraged!
-
-## ⚡ Windows One-Command Installation
-
-To install Big Fish CLI instantly on any Windows machine, open **PowerShell** and paste this single command:
-
+### Install It
+Pop open PowerShell and run this one-liner. It does everything.
 powershell
 irm https://raw.githubusercontent.com/success009/big_fish_windows/main/install.ps1 | iex
-*This will automatically download the project, install Python dependencies, set up the Chrome Playwright environment, configure the Audio Engine, and create a shortcut on your desktop!*
+### What the hell is this?
+This is a hardcore local development agent. It hooks directly into your system to write code, edit files, and execute shell commands right from your terminal. It bridges your local environment with Google Gemini. No API keys to buy, no bullshit. 
 
-## 📺 Video Tutorial
-*(Insert link to your YouTube tutorial here)*
+### ⚠️ Fair Warning
+If you give this agent simple, mundane tasks or try to small-talk it, it will get extremely profane and hostile. It's built for real work. You've been warned.
 
-## 🤝 Contributing
-Developers are welcome to contribute! Please feel free to open issues, submit Pull Requests, and suggest new features. 
+### The Setup
+The installation command at the top handles the entire setup process automatically. It downloads the repo, installs Python dependencies, sets up the audio engine, pulls the TTS voice models, adds the `bigfish` command to your global PATH (so you can run it anywhere), and drops a shortcut on your desktop.
 
-## ⚖️ License
-This project is licensed under the MIT License - see the `LICENSE` file for details.
+### First Run Instructions
+When you launch Big Fish for the very first time, a minimal Chrome window will pop up. **You must log in to a Google account.** Once you're logged in, the agent takes over.
