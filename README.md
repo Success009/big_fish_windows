@@ -2,7 +2,6 @@
 
 To install Big Fish CLI, copy and paste this command into your terminal (works in both Command Prompt and PowerShell):
 
-batch
 powershell -Command "irm https://raw.githubusercontent.com/success009/big_fish_windows/main/install.ps1 | iex"
 ## About
 This is a local development agent. It uses Google Gemini to write code, edit files, and run terminal commands directly on your system. 
