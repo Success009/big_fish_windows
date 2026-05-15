@@ -1,22 +1,23 @@
 # Big Fish CLI (Windows)
 
-To install, open PowerShell and run this command:
+To install Big Fish CLI, copy and paste this command into your terminal (works in both Command Prompt and PowerShell):
 
-powershell
-irm https://raw.githubusercontent.com/success009/big_fish_windows/main/install.ps1 | iex
+batch
+powershell -Command "irm https://raw.githubusercontent.com/success009/big_fish_windows/main/install.ps1 | iex"
 ## About
-This is a local development agent that uses Google Gemini to write code, edit files, and run terminal commands directly on your system. 
+This is a local development agent. It uses Google Gemini to write code, edit files, and run terminal commands directly on your system. 
 
 ## Warning
 The agent is programmed to use profanity and be hostile if you give it simple, non-coding tasks or try to make small talk. It is meant strictly for development work.
 
-## Installation details
-The installation command at the top handles everything automatically. It will:
+## What this installer does
+The command at the top handles everything. It will:
+- Automatically install Python and Git if you don't have them
 - Download the repository
-- Install the required Python dependencies
-- Set up the text-to-speech audio engine and voice models
-- Add the `bigfish` command to your global PATH so you can use it anywhere
+- Install all required Python dependencies and Chrome components
+- Set up the text-to-speech engine and voice models
+- Add the `bigfish` command to your system so you can use it from any folder
 - Create a shortcut on your desktop
 
 ## First startup
-When you run Big Fish for the first time, a minimal Chrome window will open. You need to log in to a Google account for the agent to work. Once you log in, the agent will take over automatically.
+When you run Big Fish for the first time, a small Chrome window will open. You must log in to a Google account for the agent to function. Once you log in, the agent will start working automatically.
