@@ -1,0 +1,48 @@
+5a584b3ae000-5a584b3b0000 r--p 00000000 103:07 2684496                   /usr/bin/cat
+5a584b3b0000-5a584b3b5000 r-xp 00002000 103:07 2684496                   /usr/bin/cat
+5a584b3b5000-5a584b3b7000 r--p 00007000 103:07 2684496                   /usr/bin/cat
+5a584b3b7000-5a584b3b8000 r--p 00008000 103:07 2684496                   /usr/bin/cat
+5a584b3b8000-5a584b3b9000 rw-p 00009000 103:07 2684496                   /usr/bin/cat
+5a584b9ad000-5a584b9ce000 rw-p 00000000 00:00 0                          [heap]
+79c508400000-79c5089cf000 r--p 00000000 103:07 2653526                   /usr/lib/locale/locale-archive
+79c508a00000-79c508a28000 r--p 00000000 103:07 2624256                   /usr/lib/x86_64-linux-gnu/libc.so.6
+79c508a28000-79c508bb0000 r-xp 00028000 103:07 2624256                   /usr/lib/x86_64-linux-gnu/libc.so.6
+79c508bb0000-79c508bff000 r--p 001b0000 103:07 2624256                   /usr/lib/x86_64-linux-gnu/libc.so.6
+79c508bff000-79c508c03000 r--p 001fe000 103:07 2624256                   /usr/lib/x86_64-linux-gnu/libc.so.6
+79c508c03000-79c508c05000 rw-p 00202000 103:07 2624256                   /usr/lib/x86_64-linux-gnu/libc.so.6
+79c508c05000-79c508c12000 rw-p 00000000 00:00 0 
+79c508dbb000-79c508de0000 rw-p 00000000 00:00 0 
+79c508df7000-79c508df9000 rw-p 00000000 00:00 0 
+79c508df9000-79c508dfd000 r--p 00000000 00:00 0                          [vvar]
+79c508dfd000-79c508dff000 r--p 00000000 00:00 0                          [vvar_vclock]
+79c508dff000-79c508e01000 r-xp 00000000 00:00 0                          [vdso]
+79c508e01000-79c508e02000 r--p 00000000 103:07 2624253                   /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+79c508e02000-79c508e2d000 r-xp 00001000 103:07 2624253                   /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+79c508e2d000-79c508e37000 r--p 0002c000 103:07 2624253                   /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+79c508e37000-79c508e39000 r--p 00036000 103:07 2624253                   /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+79c508e39000-79c508e3b000 rw-p 00038000 103:07 2624253                   /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7ffef8b2b000-7ffef8b4c000 rw-p 00000000 00:00 0                          [stack]
+ffffffffff600000-ffffffffff601000 --xp 00000000 00:00 0                  [vsyscall]
+               total        used        free      shared  buff/cache   available
+Mem:           7.4Gi       3.3Gi       2.3Gi       430Mi       2.5Gi       4.1Gi
+Swap:          2.0Gi          0B       2.0Gi
+MemTotal:        7809492 kB
+MemFree:         2388100 kB
+MemAvailable:    4335600 kB
+Buffers:           96784 kB
+Cached:          2472632 kB
+SwapCached:            0 kB
+Active:          3682128 kB
+Inactive:         933444 kB
+Active(anon):    2487280 kB
+Inactive(anon):        0 kB
+Active(file):    1194848 kB
+Inactive(file):   933444 kB
+Unevictable:      312680 kB
+Mlocked:              96 kB
+SwapTotal:       2097148 kB
+SwapFree:        2097148 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:              3580 kB
+Writeback:             0 kB

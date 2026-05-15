@@ -1,0 +1,5 @@
+playwright
+pyperclip
+rich
+prompt_toolkit
+nest_asyncio
