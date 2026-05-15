@@ -1,17 +1,22 @@
-# Big Fish CLI (Windows Edition)
+# Big Fish CLI (Windows)
 
-### Install It
-Pop open PowerShell and run this one-liner. It does everything.
+To install, open PowerShell and run this command:
+
 powershell
 irm https://raw.githubusercontent.com/success009/big_fish_windows/main/install.ps1 | iex
-### What the hell is this?
-This is a hardcore local development agent. It hooks directly into your system to write code, edit files, and execute shell commands right from your terminal. It bridges your local environment with Google Gemini. No API keys to buy, no bullshit. 
+## About
+This is a local development agent that uses Google Gemini to write code, edit files, and run terminal commands directly on your system. 
 
-### ⚠️ Fair Warning
-If you give this agent simple, mundane tasks or try to small-talk it, it will get extremely profane and hostile. It's built for real work. You've been warned.
+## Warning
+The agent is programmed to use profanity and be hostile if you give it simple, non-coding tasks or try to make small talk. It is meant strictly for development work.
 
-### The Setup
-The installation command at the top handles the entire setup process automatically. It downloads the repo, installs Python dependencies, sets up the audio engine, pulls the TTS voice models, adds the `bigfish` command to your global PATH (so you can run it anywhere), and drops a shortcut on your desktop.
+## Installation details
+The installation command at the top handles everything automatically. It will:
+- Download the repository
+- Install the required Python dependencies
+- Set up the text-to-speech audio engine and voice models
+- Add the `bigfish` command to your global PATH so you can use it anywhere
+- Create a shortcut on your desktop
 
-### First Run Instructions
-When you launch Big Fish for the very first time, a minimal Chrome window will pop up. **You must log in to a Google account.** Once you're logged in, the agent takes over.
+## First startup
+When you run Big Fish for the first time, a minimal Chrome window will open. You need to log in to a Google account for the agent to work. Once you log in, the agent will take over automatically.
