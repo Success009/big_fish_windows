@@ -84,8 +84,8 @@ def _tts_playback_worker():
         wav_path = AUDIO_QUEUE.get()
         if wav_path is None: break
         
-        PLAYING_AUDIO = True
-                 try:
+PLAYING_AUDIO = True
+        try:
             if os.path.exists(wav_path):
                 import winsound
                 winsound.PlaySound(wav_path, winsound.SND_FILENAME)

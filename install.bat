@@ -52,26 +52,10 @@ echo     pause
 echo ^)
 ) > bigfish.bat
 
-:: Add to User PATH and create Shortcut via PowerShell
-powershell -NoProfile -ExecutionPolicy Bypass -Command ^
-    "$repo = '%~dp0'.TrimEnd('\'); ^
-    $userPath = [Environment]::GetEnvironmentVariable('PATH', 'User'); ^
-    if (-not $userPath) { $userPath = '' }; ^
-    $paths = $userPath.Split(';', [System.StringSplitOptions]::RemoveEmptyEntries); ^
-    if (-not $paths.Contains($repo)) { ^
-        [Environment]::SetEnvironmentVariable('PATH', $userPath + ';' + $repo, 'User'); ^
-        Write-Host 'Added project folder to PATH.'; ^
-    } else { ^
-        Write-Host 'Project folder already in PATH.'; ^
-    }; ^
-    $wshell = New-Object -ComObject WScript.Shell; ^
-    $desktopPath = [Environment]::GetFolderPath('Desktop'); ^
-    $shortcut = $wshell.CreateShortcut($desktopPath + '\Big Fish.lnk'); ^
-    $shortcut.TargetPath = $repo + '\bigfish.bat'; ^
-    $shortcut.WorkingDirectory = $repo; ^
-    if (Test-Path ($repo + '\bigfishlogo.png')) { $shortcut.IconLocation = $repo + '\bigfishlogo.png' } else { $shortcut.IconLocation = 'shell32.dll,1' }; ^
-    $shortcut.Save(); ^
-    Write-Host 'Desktop Shortcut created.'"
+:: Add to User PATH and create Shortcut via PowerShell (Simplified to avoid batch-to-ps1 line break bugs)
+set "PS_CMD=$repo='%~dp0'.TrimEnd('\'); $userPath=[Environment]::GetEnvironmentVariable('PATH','User'); if(!$userPath){$userPath=''}; $paths=$userPath.Split(';',[System.StringSplitOptions]::RemoveEmptyEntries); if(!$paths.Contains($repo)){[Environment]::SetEnvironmentVariable('PATH',$userPath+';'+$repo,'User'); write-host 'Added to PATH.'}else{write-host 'Already in PATH.'}; $wshell=New-Object -ComObject WScript.Shell; $dk=[Environment]::GetFolderPath('Desktop'); $s=$wshell.CreateShortcut($dk+'\Big Fish.lnk'); $s.TargetPath=$repo+'\bigfish.bat'; $s.WorkingDirectory=$repo; if(Test-Path ($repo+'\bigfishlogo.png')){$s.IconLocation=$repo+'\bigfishlogo.png'}else{$s.IconLocation='shell32.dll,1'}; $s.Save(); write-host 'Shortcut created.'"
+
+powershell -NoProfile -ExecutionPolicy Bypass -Command "%PS_CMD%"
 
 echo.
 echo ==============================================
