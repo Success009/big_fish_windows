@@ -20,3 +20,6 @@ The command at the top handles everything. It will:
 
 ## First startup
 When you run Big Fish for the first time, a small Chrome window will open. You must log in to a Google account for the agent to function. Once you log in, the agent will start working automatically.
+
+## Updating
+To update Big Fish CLI to the latest version, just run the installation command again. Your saved sessions and history will be preserved.

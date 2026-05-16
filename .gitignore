@@ -1,10 +1,10 @@
 venv/
 __pycache__/
-*.pyc
-logs/
+*.log
 sessions/
+logs/
 projects/
-scratchpad.txt
-last_command_output.txt
 .cli_history
 .cli_config.json
+last_command_output.txt
+scratchpad.txt
