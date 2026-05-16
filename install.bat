@@ -37,9 +37,19 @@ echo [5/5] Setting up Global Command and Shortcut...
 :: Create the launcher batch file
 (
 echo @echo off
-echo cd /d "%~dp0"
+echo cd /d "%%~dp0"
+echo if not exist venv (
+echo     echo [ERROR] Virtual environment not found. Please run install.bat again.
+echo     pause
+echo     exit /b
+echo ^)
 echo call venv\Scripts\activate.bat
 echo python main.py %%*
+echo if %%ERRORLEVEL%% neq 0 (
+echo     echo.
+echo     echo [CRASH] Big Fish CLI exited with an error.
+echo     pause
+echo ^)
 ) > bigfish.bat
 
 :: Add to User PATH and create Shortcut via PowerShell
