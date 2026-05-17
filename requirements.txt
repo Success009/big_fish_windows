@@ -3,3 +3,4 @@ pyperclip
 rich
 prompt_toolkit
 nest_asyncio
+Pillow
