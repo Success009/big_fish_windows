@@ -1,5 +1,5 @@
 @echo off
-setlocal enabledelayedexpansion
+setlocal
 echo ==============================================
 echo Big Fish CLI - Windows One-Click Installer
 echo ==============================================
@@ -52,10 +52,9 @@ echo     pause
 echo ^)
 ) > bigfish.bat
 
-:: Add to User PATH and create Shortcut via PowerShell (Simplified to avoid batch-to-ps1 line break bugs)
-set "PS_CMD=$repo='%~dp0'.TrimEnd('\'); $userPath=[Environment]::GetEnvironmentVariable('PATH','User'); if(!$userPath){$userPath=''}; $paths=$userPath.Split(';',[System.StringSplitOptions]::RemoveEmptyEntries); if(!$paths.Contains($repo)){[Environment]::SetEnvironmentVariable('PATH',$userPath+';'+$repo,'User'); write-host 'Added to PATH.'}else{write-host 'Already in PATH.'}; $wshell=New-Object -ComObject WScript.Shell; $dk=[Environment]::GetFolderPath('Desktop'); $s=$wshell.CreateShortcut($dk+'\Big Fish.lnk'); $s.TargetPath=$repo+'\bigfish.bat'; $s.WorkingDirectory=$repo; if(Test-Path ($repo+'\bigfishlogo.png')){$s.IconLocation=$repo+'\bigfishlogo.png'}else{$s.IconLocation='shell32.dll,1'}; $s.Save(); write-host 'Shortcut created.'"
-
-powershell -NoProfile -ExecutionPolicy Bypass -Command "%PS_CMD%"
+:: Add to User PATH and create Shortcut via PowerShell
+:: We avoid using '!' to prevent conflicts with Batch expansion
+powershell -NoProfile -ExecutionPolicy Bypass -Command "$r='%~dp0'.TrimEnd('\'); $u=[Environment]::GetEnvironmentVariable('PATH','User'); if(-not $u){$u=''}; $p=$u.Split(';',[System.StringSplitOptions]::RemoveEmptyEntries); if(-not $p.Contains($r)){[Environment]::SetEnvironmentVariable('PATH',$u+';'+$r,'User'); write-host 'Added to PATH.'}else{write-host 'Already in PATH.'}; $w=New-Object -ComObject WScript.Shell; $d=[Environment]::GetFolderPath('Desktop'); $s=$w.CreateShortcut($d+'\Big Fish.lnk'); $s.TargetPath=$r+'\bigfish.bat'; $s.WorkingDirectory=$r; if(Test-Path ($r+'\bigfishlogo.png')){$s.IconLocation=$r+'\bigfishlogo.png'}else{$s.IconLocation='shell32.dll,1'}; $s.Save(); write-host 'Shortcut created.'"
 
 echo.
 echo ==============================================
